@@ -6,8 +6,8 @@
 //  Copyright © 2019 Justin Reusch. All rights reserved.
 //
 
-@testable import HighestNumberPairing
 import XCTest
+@testable import NumberPairing
 
 class NumberPairingUnitTests: XCTestCase {
 

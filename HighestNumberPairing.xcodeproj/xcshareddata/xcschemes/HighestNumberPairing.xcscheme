@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HighestNumberPairing::HighestNumberPairingTests"
-               BuildableName = "HighestNumberPairingTests.xctest"
-               BlueprintName = "HighestNumberPairingTests"
+               BlueprintIdentifier = "HighestNumberPairing::NumberPairingTests"
+               BuildableName = "NumberPairingTests.xctest"
+               BlueprintName = "NumberPairingTests"
                ReferencedContainer = "container:HighestNumberPairing.xcodeproj">
             </BuildableReference>
          </TestableReference>

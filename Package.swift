@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "HighestNumberPairing",
+    products: [
+        .executable(name: "HighestNumberPairing", targets: ["HighestNumberPairing"]),
+        .library(name: "NumberPairing", targets: ["NumberPairing"]),
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -14,9 +18,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "HighestNumberPairing",
+            dependencies: ["NumberPairing"]),
+        .target(
+            name: "NumberPairing",
             dependencies: []),
         .testTarget(
-            name: "HighestNumberPairingTests",
-            dependencies: ["HighestNumberPairing"]),
+            name: "NumberPairingTests",
+            dependencies: ["NumberPairing"]),
     ]
 )
