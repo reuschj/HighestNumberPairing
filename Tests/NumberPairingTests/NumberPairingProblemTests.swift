@@ -6,13 +6,13 @@
 //  Copyright © 2019 Justin Reusch. All rights reserved.
 //
 
-@testable import HighestNumberPairing
 import XCTest
+@testable import NumberPairing
 
 let largeProblemSize: Double = 900
 let massiveProblemSize: Double = 9_000_000
 
-class HighestNumberPairingTests: XCTestCase {
+class NumberPairingProblemTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

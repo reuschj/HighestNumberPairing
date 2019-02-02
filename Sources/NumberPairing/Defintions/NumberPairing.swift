@@ -43,9 +43,9 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
     var hash: Double {
         return storedNumber + sumOfNumbers + result
     }
-    
+
     // Initializers ---------------------------------------------------------- /
-    
+
     public init(oneNumberIs oneNumber: Double, addingUpTo sumOfNumbers: Double) {
         self.storedNumber = oneNumber
         self.sumOfNumbers = sumOfNumbers
@@ -54,20 +54,20 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
     public init(oneNumberIs oneNumber: Double) {
         self.init(oneNumberIs: oneNumber, addingUpTo: defaultSum)
     }
-    
+
     // Methods --------------------------------------------------------------- /
-    
+
     // Finds the differnce between two NumberPairings
     public func difference(_ anotherNumberPairing: NumberPairing) -> Double {
         return abs(result - anotherNumberPairing.result)
     }
-    
+
     // This will test if two results are close enough to be considered equal to each other
     // The two NumberPairings may still be !=
     public func isEquivalentTo(_ anotherNumberPairing: NumberPairing) -> Bool {
         return self.difference(anotherNumberPairing) < minimumPrecision
     }
-    
+
     // Creates a long report with both numbers, the product, difference and the result
     public func longReport() -> String {
         let firstRounded = roundNumberToString(from: firstNumber, withPrecision: 100_000)
@@ -84,7 +84,7 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
             Result: \(resultRounded)\n
             """
     }
-    
+
     // Creates a short report with both numbers and the result
     public func shortReport() -> String {
         let firstRounded = roundNumberToString(from: firstNumber, withPrecision: 100_000)
@@ -92,17 +92,17 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
         let resultRounded = roundNumberToString(from: result, withPrecision: 100_000)
         return "\(firstRounded) and \(secondRounded) -> \(resultRounded)"
     }
-    
+
     // Private Methods ------------------------------------------------------- /
-    
+
     // This will set a bound to ensures that the number is positive and not more than the sum
     private func validateAndCorrectNumberInput(of userInput: Double) -> Double {
         let nonNegative = abs(userInput)
         return nonNegative > sumOfNumbers ? sumOfNumbers : nonNegative
     }
-    
+
     // Static Methods -------------------------------------------------------- /
-    
+
     // Method for checking equality
     public static func == (lhs: NumberPairing, rhs: NumberPairing) -> Bool {
         let sumsAreEqual = lhs.sumOfNumbers == rhs.sumOfNumbers
@@ -110,7 +110,7 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
         let storedIsEqualToInverse = lhs.storedNumber == rhs.secondNumber
         return (sumsAreEqual && storedAreEqual) || (sumsAreEqual && storedIsEqualToInverse)
     }
-    
+
     // Method for checking non-equality
     public static func != (lhs: NumberPairing, rhs: NumberPairing) -> Bool {
         let sumsAreEqual = lhs.sumOfNumbers == rhs.sumOfNumbers
@@ -118,10 +118,10 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
         let storedIsNotEqualToInverse = lhs.storedNumber != rhs.secondNumber
         return !sumsAreEqual || (sumsAreEqual && storedAreNotEqual) || (sumsAreEqual && storedIsNotEqualToInverse)
     }
-    
+
     // Method for comarison
     public static func < (lhs: NumberPairing, rhs: NumberPairing) -> Bool {
         return lhs.result < rhs.result
     }
-    
+
 }

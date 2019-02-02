@@ -1,8 +1,8 @@
 import XCTest
 
-import HighestNumberPairingTests
+import NumberPairingTests
 
 var tests = [XCTestCaseEntry]()
-tests += HighestNumberPairingTests.allTests()
+tests += NumberPairingProblemTests.allTests()
 tests += NumberPairingTests.allTests()
 XCTMain(tests)

@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import NumberPairing
 
 // Get user input from command line, prompt or default
+
 let sumFromCommandLineInput = NumberPairingProblem.getUserInput()
 
 let collectOtherResults = NumberPairingProblem.lookForSecondCommand()

@@ -21,54 +21,66 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_30 /* NumberPairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* NumberPairing.swift */; };
-		OBJ_31 /* NumberPairingProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NumberPairingProblem.swift */; };
-		OBJ_32 /* roundNumberToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* roundNumberToString.swift */; };
-		OBJ_33 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* constants.swift */; };
-		OBJ_34 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* main.swift */; };
+		OBJ_31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_33 /* NumberPairing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */; };
 		OBJ_41 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_53 /* HighestNumberPairingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* HighestNumberPairingTests.swift */; };
-		OBJ_54 /* NumberPairingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NumberPairingTests.swift */; };
-		OBJ_55 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCTestManifests.swift */; };
+		OBJ_52 /* NumberPairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NumberPairing.swift */; };
+		OBJ_53 /* NumberPairingProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* NumberPairingProblem.swift */; };
+		OBJ_54 /* roundNumberToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* roundNumberToString.swift */; };
+		OBJ_55 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* constants.swift */; };
+		OBJ_61 /* NumberPairingProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* NumberPairingProblemTests.swift */; };
+		OBJ_62 /* NumberPairingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NumberPairingTests.swift */; };
+		OBJ_63 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCTestManifests.swift */; };
+		OBJ_65 /* NumberPairing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A431F6AA2202A1640052C848 /* PBXContainerItemProxy */ = {
+		A431F6AD2205667F0052C848 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "HighestNumberPairing::HighestNumberPairing";
-			remoteInfo = HighestNumberPairing;
+			remoteGlobalIDString = "HighestNumberPairing::NumberPairing";
+			remoteInfo = NumberPairing;
 		};
-		A431F6AB2202A1650052C848 /* PBXContainerItemProxy */ = {
+		A431F6AE2205667F0052C848 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = "HighestNumberPairing::HighestNumberPairingTests";
-			remoteInfo = HighestNumberPairingTests;
+			remoteGlobalIDString = "HighestNumberPairing::NumberPairing";
+			remoteInfo = NumberPairing;
+		};
+		A431F6AF220566820052C848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "HighestNumberPairing::NumberPairingTests";
+			remoteInfo = NumberPairingTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A431F6AC2202C98C0052C848 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A431F6B0220566AD0052C848 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A431F6B1220566AD0052C848 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		"HighestNumberPairing::HighestNumberPairing::Product" /* HighestNumberPairing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = HighestNumberPairing; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HighestNumberPairing::HighestNumberPairingTests::Product" /* HighestNumberPairingTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = HighestNumberPairingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_10 /* NumberPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairing.swift; sourceTree = "<group>"; };
-		OBJ_11 /* NumberPairingProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingProblem.swift; sourceTree = "<group>"; };
-		OBJ_13 /* roundNumberToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundNumberToString.swift; sourceTree = "<group>"; };
-		OBJ_14 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		OBJ_15 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_19 /* HighestNumberPairingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighestNumberPairingTests.swift; sourceTree = "<group>"; };
+		"HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NumberPairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberPairingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* NumberPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairing.swift; sourceTree = "<group>"; };
+		OBJ_13 /* NumberPairingProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingProblem.swift; sourceTree = "<group>"; };
+		OBJ_15 /* roundNumberToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundNumberToString.swift; sourceTree = "<group>"; };
+		OBJ_16 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		OBJ_19 /* NumberPairingProblemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingProblemTests.swift; sourceTree = "<group>"; };
 		OBJ_20 /* NumberPairingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingTests.swift; sourceTree = "<group>"; };
 		OBJ_21 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_35 /* Frameworks */ = {
+		OBJ_32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				OBJ_33 /* NumberPairing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,41 +91,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		OBJ_64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_65 /* NumberPairing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_12 /* Utilities */ = {
+		OBJ_10 /* NumberPairing */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* roundNumberToString.swift */,
+				OBJ_11 /* Defintions */,
+				OBJ_14 /* Utilities */,
+				OBJ_16 /* constants.swift */,
+			);
+			name = NumberPairing;
+			path = Sources/NumberPairing;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_11 /* Defintions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* NumberPairing.swift */,
+				OBJ_13 /* NumberPairingProblem.swift */,
+			);
+			path = Defintions;
+			sourceTree = "<group>";
+		};
+		OBJ_14 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* roundNumberToString.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		OBJ_16 /* Tests */ = {
+		OBJ_17 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* HighestNumberPairingTests */,
+				OBJ_18 /* NumberPairingTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* HighestNumberPairingTests */ = {
+		OBJ_18 /* NumberPairingTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* HighestNumberPairingTests.swift */,
+				OBJ_19 /* NumberPairingProblemTests.swift */,
 				OBJ_20 /* NumberPairingTests.swift */,
 				OBJ_21 /* XCTestManifests.swift */,
 			);
-			name = HighestNumberPairingTests;
-			path = Tests/HighestNumberPairingTests;
+			name = NumberPairingTests;
+			path = Tests/NumberPairingTests;
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"HighestNumberPairing::HighestNumberPairingTests::Product" /* HighestNumberPairingTests.xctest */,
+				"HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */,
 				"HighestNumberPairing::HighestNumberPairing::Product" /* HighestNumberPairing */,
+				"HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -121,10 +162,11 @@
 		OBJ_5 /*  */ = {
 			isa = PBXGroup;
 			children = (
-				A431F6AC2202C98C0052C848 /* README.md */,
+				A431F6B1220566AD0052C848 /* Info.plist */,
+				A431F6B0220566AD0052C848 /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_16 /* Tests */,
+				OBJ_17 /* Tests */,
 				OBJ_22 /* Products */,
 			);
 			name = "";
@@ -134,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* HighestNumberPairing */,
+				OBJ_10 /* NumberPairing */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -141,46 +184,35 @@
 		OBJ_8 /* HighestNumberPairing */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Defintions */,
-				OBJ_12 /* Utilities */,
-				OBJ_14 /* constants.swift */,
-				OBJ_15 /* main.swift */,
+				OBJ_9 /* main.swift */,
 			);
 			name = HighestNumberPairing;
 			path = Sources/HighestNumberPairing;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_9 /* Defintions */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* NumberPairing.swift */,
-				OBJ_11 /* NumberPairingProblem.swift */,
-			);
-			path = Defintions;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
 		"HighestNumberPairing::HighestNumberPairing" /* HighestNumberPairing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_26 /* Build configuration list for PBXNativeTarget "HighestNumberPairing" */;
+			buildConfigurationList = OBJ_27 /* Build configuration list for PBXNativeTarget "HighestNumberPairing" */;
 			buildPhases = (
-				OBJ_29 /* Sources */,
-				OBJ_35 /* Frameworks */,
+				OBJ_30 /* Sources */,
+				OBJ_32 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_34 /* PBXTargetDependency */,
 			);
 			name = HighestNumberPairing;
 			productName = HighestNumberPairing;
 			productReference = "HighestNumberPairing::HighestNumberPairing::Product" /* HighestNumberPairing */;
 			productType = "com.apple.product-type.tool";
 		};
-		"HighestNumberPairing::HighestNumberPairingTests" /* HighestNumberPairingTests */ = {
+		"HighestNumberPairing::NumberPairing" /* NumberPairing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "HighestNumberPairingTests" */;
+			buildConfigurationList = OBJ_48 /* Build configuration list for PBXNativeTarget "NumberPairing" */;
 			buildPhases = (
 				OBJ_51 /* Sources */,
 				OBJ_56 /* Frameworks */,
@@ -188,11 +220,27 @@
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_57 /* PBXTargetDependency */,
 			);
-			name = HighestNumberPairingTests;
-			productName = HighestNumberPairingTests;
-			productReference = "HighestNumberPairing::HighestNumberPairingTests::Product" /* HighestNumberPairingTests.xctest */;
+			name = NumberPairing;
+			productName = NumberPairing;
+			productReference = "HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"HighestNumberPairing::NumberPairingTests" /* NumberPairingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_57 /* Build configuration list for PBXNativeTarget "NumberPairingTests" */;
+			buildPhases = (
+				OBJ_60 /* Sources */,
+				OBJ_64 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_66 /* PBXTargetDependency */,
+			);
+			name = NumberPairingTests;
+			productName = NumberPairingTests;
+			productReference = "HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		"HighestNumberPairing::SwiftPMPackageDescription" /* HighestNumberPairingPackageDescription */ = {
@@ -232,21 +280,18 @@
 				"HighestNumberPairing::HighestNumberPairing" /* HighestNumberPairing */,
 				"HighestNumberPairing::SwiftPMPackageDescription" /* HighestNumberPairingPackageDescription */,
 				"HighestNumberPairing::HighestNumberPairingPackageTests::ProductTarget" /* HighestNumberPairingPackageTests */,
-				"HighestNumberPairing::HighestNumberPairingTests" /* HighestNumberPairingTests */,
+				"HighestNumberPairing::NumberPairing" /* NumberPairing */,
+				"HighestNumberPairing::NumberPairingTests" /* NumberPairingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_29 /* Sources */ = {
+		OBJ_30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_30 /* NumberPairing.swift in Sources */,
-				OBJ_31 /* NumberPairingProblem.swift in Sources */,
-				OBJ_32 /* roundNumberToString.swift in Sources */,
-				OBJ_33 /* constants.swift in Sources */,
-				OBJ_34 /* main.swift in Sources */,
+				OBJ_31 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,42 +307,58 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_53 /* HighestNumberPairingTests.swift in Sources */,
-				OBJ_54 /* NumberPairingTests.swift in Sources */,
-				OBJ_55 /* XCTestManifests.swift in Sources */,
+				OBJ_52 /* NumberPairing.swift in Sources */,
+				OBJ_53 /* NumberPairingProblem.swift in Sources */,
+				OBJ_54 /* roundNumberToString.swift in Sources */,
+				OBJ_55 /* constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_61 /* NumberPairingProblemTests.swift in Sources */,
+				OBJ_62 /* NumberPairingTests.swift in Sources */,
+				OBJ_63 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		OBJ_34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "HighestNumberPairing::NumberPairing" /* NumberPairing */;
+			targetProxy = A431F6AD2205667F0052C848 /* PBXContainerItemProxy */;
+		};
 		OBJ_46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "HighestNumberPairing::HighestNumberPairingTests" /* HighestNumberPairingTests */;
-			targetProxy = A431F6AB2202A1650052C848 /* PBXContainerItemProxy */;
+			target = "HighestNumberPairing::NumberPairingTests" /* NumberPairingTests */;
+			targetProxy = A431F6AF220566820052C848 /* PBXContainerItemProxy */;
 		};
-		OBJ_57 /* PBXTargetDependency */ = {
+		OBJ_66 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "HighestNumberPairing::HighestNumberPairing" /* HighestNumberPairing */;
-			targetProxy = A431F6AA2202A1640052C848 /* PBXContainerItemProxy */;
+			target = "HighestNumberPairing::NumberPairing" /* NumberPairing */;
+			targetProxy = A431F6AE2205667F0052C848 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_27 /* Debug */ = {
+		OBJ_28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/HighestNumberPairing_Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HighestNumberPairing;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
@@ -306,20 +367,20 @@
 			};
 			name = Debug;
 		};
-		OBJ_28 /* Release */ = {
+		OBJ_29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/HighestNumberPairing_Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = HighestNumberPairing;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
@@ -407,25 +468,52 @@
 		OBJ_49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/HighestNumberPairingTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairing_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = NumberPairing;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HighestNumberPairingTests;
+				TARGET_NAME = NumberPairing;
 			};
 			name = Debug;
 		};
 		OBJ_50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairing_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = NumberPairing;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = NumberPairing;
+			};
+			name = Release;
+		};
+		OBJ_58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -435,14 +523,35 @@
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/HighestNumberPairingTests_Info.plist;
+				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairingTests_Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 4.2;
-				TARGET_NAME = HighestNumberPairingTests;
+				TARGET_NAME = NumberPairingTests;
+			};
+			name = Debug;
+		};
+		OBJ_59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairingTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = NumberPairingTests;
 			};
 			name = Release;
 		};
@@ -458,11 +567,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_26 /* Build configuration list for PBXNativeTarget "HighestNumberPairing" */ = {
+		OBJ_27 /* Build configuration list for PBXNativeTarget "HighestNumberPairing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_27 /* Debug */,
-				OBJ_28 /* Release */,
+				OBJ_28 /* Debug */,
+				OBJ_29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -485,11 +594,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_48 /* Build configuration list for PBXNativeTarget "HighestNumberPairingTests" */ = {
+		OBJ_48 /* Build configuration list for PBXNativeTarget "NumberPairing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_49 /* Debug */,
 				OBJ_50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_57 /* Build configuration list for PBXNativeTarget "NumberPairingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_58 /* Debug */,
+				OBJ_59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
