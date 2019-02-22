@@ -247,10 +247,10 @@ open class NumberPairingProblem {
     public static func lookForSecondCommand() -> Bool {
 
         // Look for second command
-        let secondCommand: String? = CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : nil;
+        let secondCommand: String? = CommandLine.arguments.count > 2 ? CommandLine.arguments[2] : nil
 
         if let possibleSecondCommand = secondCommand {
-            let lowercaseCommand = possibleSecondCommand.lowercased();
+            let lowercaseCommand = possibleSecondCommand.lowercased()
             return !(lowercaseCommand == "no" || lowercaseCommand == "false")
         } else {
             // If no result, return true
