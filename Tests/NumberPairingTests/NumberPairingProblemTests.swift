@@ -90,7 +90,7 @@ class NumberPairingProblemTests: XCTestCase {
 
     static var allTests = [
         ("testResultForEightIsCorrect", testResultForEightIsCorrect),
-        ("testThatRunCountIsUnderFourty", testThatRunCountIsUnderFourty),
+        ("testThatRunCountIsUnderForty", testThatRunCountIsUnderForty),
         ("testPerformanceOfStandardProblem", testPerformanceOfStandardProblem),
         ("testPerformanceOfStandardProblemWithOtherResults", testPerformanceOfStandardProblemWithOtherResults),
         ("testPerformanceOfLargeProblemWithOtherResults", testPerformanceOfLargeProblemWithOtherResults),
