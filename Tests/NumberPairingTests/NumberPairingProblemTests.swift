@@ -44,7 +44,7 @@ class NumberPairingProblemTests: XCTestCase {
         XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
     }
 
-    func testThatRunCountIsUnderFourty() {
+    func testThatRunCountIsUnderForty() {
         let maxRunCount = 40
         let problem = self.printWithOtherResults(size: massiveProblemSize)
         let runs = problem.runsToSolve
