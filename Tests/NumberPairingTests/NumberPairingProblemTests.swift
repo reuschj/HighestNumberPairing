@@ -35,27 +35,27 @@ class NumberPairingProblemTests: XCTestCase {
     }
 
     func testResultForEightIsCorrect() {
-        let testProblem = NumberPairingProblem(addingUpTo: 8, withOtherResults: true)
-        let bestResult = testProblem.bestResult
-        let expectedResult = 49.26722297
-        let marginOfError = 0.00000001
-        let difference = abs(bestResult - expectedResult)
-        let testAssumption = difference < marginOfError
-        XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
+        self.measure {
+            let testProblem = NumberPairingProblem(addingUpTo: 8, withOtherResults: true)
+            let bestResult = testProblem.bestResult
+            let expectedResult = 49.26722297
+            let marginOfError = 0.00000001
+            let difference = abs(bestResult - expectedResult)
+            let testAssumption = difference < marginOfError
+            XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
+        }
+        
     }
 
     func testThatRunCountIsUnderForty() {
-        let maxRunCount = 40
-        let problem = self.printWithOtherResults(size: massiveProblemSize)
-        let runs = problem.runsToSolve
-        let testAssumption = runs < maxRunCount
-        XCTAssert(testAssumption, "Run count was \(runs), which is not less than the maximum runs allowed.")
-    }
-
-    func testPerformanceOfStandardProblem() {
         self.measure {
-            let _ = self.testResultForEightIsCorrect()
+            let maxRunCount = 40
+            let problem = self.printWithOtherResults(size: massiveProblemSize)
+            let runs = problem.runsToSolve
+            let testAssumption = runs < maxRunCount
+            XCTAssert(testAssumption, "Run count was \(runs), which is not less than the maximum runs allowed.")
         }
+        
     }
 
     func testPerformanceOfStandardProblemWithOtherResults() {
@@ -91,7 +91,6 @@ class NumberPairingProblemTests: XCTestCase {
     static var allTests = [
         ("testResultForEightIsCorrect", testResultForEightIsCorrect),
         ("testThatRunCountIsUnderForty", testThatRunCountIsUnderForty),
-        ("testPerformanceOfStandardProblem", testPerformanceOfStandardProblem),
         ("testPerformanceOfStandardProblemWithOtherResults", testPerformanceOfStandardProblemWithOtherResults),
         ("testPerformanceOfLargeProblemWithOtherResults", testPerformanceOfLargeProblemWithOtherResults),
         ("testPerformanceOfLargeProblemWithoutOtherResults", testPerformanceOfLargeProblemWithoutOtherResults),
