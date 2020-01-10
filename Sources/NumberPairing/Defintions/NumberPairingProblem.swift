@@ -1,6 +1,6 @@
 //
 //  NumberPairingProblem.swift
-//  HighesNumberPairing
+//  HighestNumberPairing
 //
 //  Created by Justin Reusch on 1/9/19.
 //  Copyright © 2019 Justin Reusch. All rights reserved.
@@ -13,41 +13,37 @@ import Foundation
   * The problem must find the largest number combination (determined by multiplying the difference by the product of the two numbers)
   */
 open class NumberPairingProblem {
+    
     let sumOfNumberPairing: Double
     var runsToSolve: Int
-    var introString: String {
-        return "Problem:\nFind two numbers that add up to \(roundNumberToString(from: sumOfNumberPairing)), such that the product multiplied by the difference produces the largest possible value.\n"
-    }
-    // Private propety to store results
-    private var results: (Double, Set<NumberPairing>, [NumberPairing]?)!
-    // Accesses best result
-    public var bestResult: Double {
-        return results.0
-    }
-     // Accesses best result and output as a formatted string report
-    var bestResultReport: String {
-        return "Best Result:\n\(results.0)\n\(lineMedium)\n"
-    }
-    // Acesses an array of winning number pairings
-    public var bestNumberPairings: Set<NumberPairing> {
-        return results.1
-    }
-    // Acesses an array of winning number pairings and outputs as formatted string report
+    
+    var introString: String { "Problem:\nFind two numbers that add up to \(roundNumberToString(from: sumOfNumberPairing)), such that the product multiplied by the difference produces the largest possible value.\n" }
+    
+    typealias ResultsTuple = (best: Double, bestPairing: Set<NumberPairing>, other: [NumberPairing]?)
+    
+    /// Private property to store results
+    private var results: ResultsTuple!
+    /// Accesses best result
+    public var bestResult: Double { results.best }
+     /// Accesses best result and output as a formatted string report
+    var bestResultReport: String { "Best Result:\n\(results.best)\n\(lineMedium)\n" }
+    
+    /// Accesses an array of winning number pairings
+    public var bestNumberPairings: Set<NumberPairing> { results.bestPairing }
+    /// Accesses an array of winning number pairings and outputs as formatted string report
     var bestNumberPairingsReport: String {
         var output = "Best Number Combination:"
-        for winner in results.1 {
+        for winner in results.bestPairing {
             output += "\n\(winner.shortReport())"
         }
         output += "\n\(lineMedium)\n"
         return output
     }
-    // Acesses an array of other number pairings
-    public var otherNumberPairings: [NumberPairing]? {
-        return results.2
-    }
-    // Acesses an array of other number pairings and outputs as formatted string report
+    /// Accesses an array of other number pairings
+    public var otherNumberPairings: [NumberPairing]? { results.other }
+    /// Accesses an array of other number pairings and outputs as formatted string report
     var otherNumberPairingsReport: String? {
-        guard let allOtherResults = results.2 else { return nil }
+        guard let allOtherResults = results.other else { return nil }
         var output = "Other Top Results:"
         let maxResults = allOtherResults.count > 10 ? 10 : allOtherResults.count
         for index in 0 ..< maxResults {
@@ -66,6 +62,7 @@ open class NumberPairingProblem {
         self.runsToSolve = 0
         self.results = self.getResults(withOtherResults: collectOtherResults)
     }
+    
     public convenience init() {
         self.init(addingUpTo: 8)
     }
@@ -83,7 +80,7 @@ open class NumberPairingProblem {
         // We will use this as the initial high NumberPairing to beat
         let initialHighValue = NumberPairing(oneNumberIs: 0, addingUpTo: sumOfNumberPairing)
 
-        // These constants for lower and upper bounds set the boudries for numbers in the number pairing
+        // These constants for lower and upper bounds set the boundaries for numbers in the number pairing
         // We will use these to ensure we don't get a NumberPairing with a number outside of these bounds
         let lowerBounds: Double = 0
         let upperBounds: Double = sumOfNumberPairing / 2
@@ -99,7 +96,7 @@ open class NumberPairingProblem {
         var maxRuns = 40
 
         // This is a recursive function that will start with low precision, look for the max value,
-        // then continue looking for higher max values (at a higher preceision) around that max value.
+        // then continue looking for higher max values (at a higher precision) around that max value.
         // When further recursion no longer finds a better value, recursion ends (as the max value has been found)
         func getHighestResultOfSequence(from lowValue: Double, to highValue: Double, by precision: Double) -> Void {
 
@@ -190,7 +187,7 @@ open class NumberPairingProblem {
                 newHighValue = upperBounds
             }
 
-            // Call recusive function again with narrower range as defined above (but higher precision)
+            // Call recursive function again with narrower range as defined above (but higher precision)
             getHighestResultOfSequence(from: newLowValue, to: newHighValue, by: newPrecision)
 
         }
@@ -222,12 +219,12 @@ open class NumberPairingProblem {
     // Gets user input from command line or input (or uses default)
     public static func getUserInput() -> Double {
 
-        // Pulls argument from commandline if available or uses default
+        // Pulls argument from command line if available or uses default
         let sumFromCommandLineInput: Double? = CommandLine.arguments.count > 1 ? Double(CommandLine.arguments[1]) : nil;
 
         var userInput: Double?
         if let possibleArgument = sumFromCommandLineInput {
-            // If an arguement was entered, assign it as user input
+            // If an argument was entered, assign it as user input
             userInput = possibleArgument
         } else {
             // Else prompt the user for input
