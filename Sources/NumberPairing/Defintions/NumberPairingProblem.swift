@@ -12,7 +12,7 @@ import Foundation
   * A class to define a problem by which takes two numbers that sum to a given amount (default to 8).
   * The problem must find the largest number combination (determined by multiplying the difference by the product of the two numbers)
   */
-open class NumberPairingProblem {
+public struct NumberPairingProblem {
     
     let sumOfNumberPairing: Double
     var runsToSolve: Int
@@ -63,7 +63,7 @@ open class NumberPairingProblem {
         self.results = self.getResults(withOtherResults: collectOtherResults)
     }
     
-    public convenience init() {
+    public init() {
         self.init(addingUpTo: 8)
     }
 
@@ -74,7 +74,7 @@ open class NumberPairingProblem {
       * Returns a tuple with the best result, an array of best result pairings and an array of other top pairings (sorted)
       * These values will be accessed by public getter properties
       */
-    private func getResults(withOtherResults collectOtherResults: Bool = true) -> (Double, Set<NumberPairing>, [NumberPairing]?) {
+    private mutating func getResults(withOtherResults collectOtherResults: Bool = true) -> (Double, Set<NumberPairing>, [NumberPairing]?) {
 
         // This is a NumberPairing instance that will always have a result of 0
         // We will use this as the initial high NumberPairing to beat

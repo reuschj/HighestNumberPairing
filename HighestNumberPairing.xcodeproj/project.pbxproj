@@ -62,8 +62,8 @@
 		A431F6B0220566AD0052C848 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A431F6B1220566AD0052C848 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		"HighestNumberPairing::HighestNumberPairing::Product" /* HighestNumberPairing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = HighestNumberPairing; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NumberPairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberPairingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NumberPairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NumberPairingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NumberPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairing.swift; sourceTree = "<group>"; };
 		OBJ_13 /* NumberPairingProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingProblem.swift; sourceTree = "<group>"; };
 		OBJ_15 /* roundNumberToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundNumberToString.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				A431F6B1220566AD0052C848 /* Info.plist */,
@@ -169,7 +169,6 @@
 				OBJ_17 /* Tests */,
 				OBJ_22 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -264,15 +263,27 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"HighestNumberPairing::HighestNumberPairing" = {
+						LastSwiftMigration = 1130;
+					};
+					"HighestNumberPairing::NumberPairing" = {
+						LastSwiftMigration = 1130;
+					};
+					"HighestNumberPairing::NumberPairingTests" = {
+						LastSwiftMigration = 1130;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "HighestNumberPairing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,7 +373,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HighestNumberPairing;
 			};
 			name = Debug;
@@ -384,7 +395,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HighestNumberPairing;
 			};
 			name = Release;
@@ -484,7 +495,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairing;
 			};
 			name = Debug;
@@ -508,7 +519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairing;
 			};
 			name = Release;
@@ -529,7 +540,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairingTests;
 			};
 			name = Debug;
@@ -550,7 +561,7 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairingTests;
 			};
 			name = Release;

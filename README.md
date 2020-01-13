@@ -50,6 +50,8 @@ Tests can also be run from within Xcode.
 - Collecting and displaying other results is now optional
 - Added unit tests
 - Revised module structure for better command line testability
+- Updated syntax for Swift 5.1
+- Changed `NumberPairingProblem` to a structure
 
 
 ## To Do
