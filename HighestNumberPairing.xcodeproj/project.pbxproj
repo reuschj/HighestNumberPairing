@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -21,13 +21,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A42CC98E240F634000400D21 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = A42CC98D240F634000400D21 /* ArgumentParser */; };
+		A42CC990240F669800400D21 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC98F240F669800400D21 /* constants.swift */; };
+		A42CC993240F74B400400D21 /* roundToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42CC992240F74B400400D21 /* roundToString.swift */; };
 		OBJ_31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_33 /* NumberPairing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */; };
 		OBJ_41 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_52 /* NumberPairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* NumberPairing.swift */; };
 		OBJ_53 /* NumberPairingProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* NumberPairingProblem.swift */; };
-		OBJ_54 /* roundNumberToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* roundNumberToString.swift */; };
-		OBJ_55 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* constants.swift */; };
 		OBJ_61 /* NumberPairingProblemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* NumberPairingProblemTests.swift */; };
 		OBJ_62 /* NumberPairingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NumberPairingTests.swift */; };
 		OBJ_63 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCTestManifests.swift */; };
@@ -59,15 +60,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A42CC98F240F669800400D21 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		A42CC992240F74B400400D21 /* roundToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundToString.swift; sourceTree = "<group>"; };
 		A431F6B0220566AD0052C848 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A431F6B1220566AD0052C848 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		"HighestNumberPairing::HighestNumberPairing::Product" /* HighestNumberPairing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = HighestNumberPairing; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NumberPairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = NumberPairingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HighestNumberPairing::NumberPairing::Product" /* NumberPairing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NumberPairing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HighestNumberPairing::NumberPairingTests::Product" /* NumberPairingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = NumberPairingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* NumberPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairing.swift; sourceTree = "<group>"; };
 		OBJ_13 /* NumberPairingProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingProblem.swift; sourceTree = "<group>"; };
-		OBJ_15 /* roundNumberToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roundNumberToString.swift; sourceTree = "<group>"; };
-		OBJ_16 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		OBJ_19 /* NumberPairingProblemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingProblemTests.swift; sourceTree = "<group>"; };
 		OBJ_20 /* NumberPairingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPairingTests.swift; sourceTree = "<group>"; };
 		OBJ_21 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
+				A42CC98E240F634000400D21 /* ArgumentParser in Frameworks */,
 				OBJ_33 /* NumberPairing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,33 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		OBJ_10 /* NumberPairing */ = {
+		A42CC991240F74A200400D21 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* Defintions */,
-				OBJ_14 /* Utilities */,
-				OBJ_16 /* constants.swift */,
+				A42CC992240F74B400400D21 /* roundToString.swift */,
 			);
-			name = NumberPairing;
-			path = Sources/NumberPairing;
-			sourceTree = SOURCE_ROOT;
+			path = Utilities;
+			sourceTree = "<group>";
 		};
-		OBJ_11 /* Defintions */ = {
+		OBJ_10 /* NumberPairing */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_12 /* NumberPairing.swift */,
 				OBJ_13 /* NumberPairingProblem.swift */,
 			);
-			path = Defintions;
-			sourceTree = "<group>";
-		};
-		OBJ_14 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_15 /* roundNumberToString.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
+			name = NumberPairing;
+			path = Sources/NumberPairing;
+			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_17 /* Tests */ = {
 			isa = PBXGroup;
@@ -159,7 +151,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				A431F6B1220566AD0052C848 /* Info.plist */,
@@ -169,7 +161,6 @@
 				OBJ_17 /* Tests */,
 				OBJ_22 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -184,7 +175,9 @@
 		OBJ_8 /* HighestNumberPairing */ = {
 			isa = PBXGroup;
 			children = (
+				A42CC991240F74A200400D21 /* Utilities */,
 				OBJ_9 /* main.swift */,
+				A42CC98F240F669800400D21 /* constants.swift */,
 			);
 			name = HighestNumberPairing;
 			path = Sources/HighestNumberPairing;
@@ -206,6 +199,9 @@
 				OBJ_34 /* PBXTargetDependency */,
 			);
 			name = HighestNumberPairing;
+			packageProductDependencies = (
+				A42CC98D240F634000400D21 /* ArgumentParser */,
+			);
 			productName = HighestNumberPairing;
 			productReference = "HighestNumberPairing::HighestNumberPairing::Product" /* HighestNumberPairing */;
 			productType = "com.apple.product-type.tool";
@@ -264,15 +260,30 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"HighestNumberPairing::HighestNumberPairing" = {
+						LastSwiftMigration = 1130;
+					};
+					"HighestNumberPairing::NumberPairing" = {
+						LastSwiftMigration = 1130;
+					};
+					"HighestNumberPairing::NumberPairingTests" = {
+						LastSwiftMigration = 1130;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "HighestNumberPairing" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
+			packageReferences = (
+				A42CC98C240F634000400D21 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = OBJ_22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +303,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_31 /* main.swift in Sources */,
+				A42CC993240F74B400400D21 /* roundToString.swift in Sources */,
+				A42CC990240F669800400D21 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +322,6 @@
 			files = (
 				OBJ_52 /* NumberPairing.swift in Sources */,
 				OBJ_53 /* NumberPairingProblem.swift in Sources */,
-				OBJ_54 /* roundNumberToString.swift in Sources */,
-				OBJ_55 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +365,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -362,7 +377,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HighestNumberPairing;
 			};
 			name = Debug;
@@ -376,7 +391,11 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -384,7 +403,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
 				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = HighestNumberPairing;
 			};
 			name = Release;
@@ -448,7 +467,8 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -475,7 +495,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairing_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -484,7 +507,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairing;
 			};
 			name = Debug;
@@ -499,7 +522,10 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairing_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -508,7 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairing;
 			};
 			name = Release;
@@ -524,12 +550,16 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairingTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairingTests;
 			};
 			name = Debug;
@@ -545,12 +575,16 @@
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = HighestNumberPairing.xcodeproj/NumberPairingTests_Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGET_NAME = NumberPairingTests;
 			};
 			name = Release;
@@ -613,6 +647,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A42CC98C240F634000400D21 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A42CC98D240F634000400D21 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A42CC98C240F634000400D21 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }

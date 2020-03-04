@@ -24,38 +24,36 @@ class NumberPairingProblemTests: XCTestCase {
 
     func printWithOtherResults(size: Double = 8) -> NumberPairingProblem {
         let testProblem = NumberPairingProblem(addingUpTo: size)
-        testProblem.printAllResults()
         return testProblem
     }
 
     func printWithoutOtherResults(size: Double = 8) -> NumberPairingProblem {
         let testProblem = NumberPairingProblem(addingUpTo: size, withOtherResults: false)
-        testProblem.printAllResults()
         return testProblem
     }
 
     func testResultForEightIsCorrect() {
-        let testProblem = NumberPairingProblem(addingUpTo: 8, withOtherResults: true)
-        let bestResult = testProblem.bestResult
-        let expectedResult = 49.26722297
-        let marginOfError = 0.00000001
-        let difference = abs(bestResult - expectedResult)
-        let testAssumption = difference < marginOfError
-        XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
-    }
-
-    func testThatRunCountIsUnderFourty() {
-        let maxRunCount = 40
-        let problem = self.printWithOtherResults(size: massiveProblemSize)
-        let runs = problem.runsToSolve
-        let testAssumption = runs < maxRunCount
-        XCTAssert(testAssumption, "Run count was \(runs), which is not less than the maximum runs allowed.")
-    }
-
-    func testPerformanceOfStandardProblem() {
         self.measure {
-            let _ = self.testResultForEightIsCorrect()
+            let testProblem = NumberPairingProblem(addingUpTo: 8, withOtherResults: true)
+            let bestResult = testProblem.bestResult
+            let expectedResult = 49.26722297
+            let marginOfError = 0.00000001
+            let difference = abs(bestResult - expectedResult)
+            let testAssumption = difference < marginOfError
+            XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
         }
+        
+    }
+
+    func testThatRunCountIsUnderForty() {
+        self.measure {
+            let maxRunCount = 40
+            let problem = self.printWithOtherResults(size: massiveProblemSize)
+            let runs = problem.runsToSolve
+            let testAssumption = runs < maxRunCount
+            XCTAssert(testAssumption, "Run count was \(runs), which is not less than the maximum runs allowed.")
+        }
+        
     }
 
     func testPerformanceOfStandardProblemWithOtherResults() {
@@ -90,8 +88,7 @@ class NumberPairingProblemTests: XCTestCase {
 
     static var allTests = [
         ("testResultForEightIsCorrect", testResultForEightIsCorrect),
-        ("testThatRunCountIsUnderFourty", testThatRunCountIsUnderFourty),
-        ("testPerformanceOfStandardProblem", testPerformanceOfStandardProblem),
+        ("testThatRunCountIsUnderForty", testThatRunCountIsUnderForty),
         ("testPerformanceOfStandardProblemWithOtherResults", testPerformanceOfStandardProblemWithOtherResults),
         ("testPerformanceOfLargeProblemWithOtherResults", testPerformanceOfLargeProblemWithOtherResults),
         ("testPerformanceOfLargeProblemWithoutOtherResults", testPerformanceOfLargeProblemWithoutOtherResults),
