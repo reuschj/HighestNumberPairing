@@ -49,6 +49,7 @@ Tests can also be run from within Xcode.
 
 
 ## New
+- Adds the new Swift [ArgumentParser](https://github.com/apple/swift-argument-parser) package.
 - New recursive method to find more accurate answer
 - New ability to take user input from command line or input prompt
 - Collecting and displaying other results is now optional
