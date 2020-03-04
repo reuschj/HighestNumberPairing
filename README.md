@@ -27,13 +27,17 @@ Optionally, you can add the number as a second argument:
 
 This runs the program with 16 as the number to use.
 
-By default, the program displays up to 10 other top results (sorted high to low). You can pass `no` or `false` as an optional second parameter in the command line to opt out of collecting other results.
+By default, the program displays only the best result. To also display 10 other top results (sorted high to low). You can specify the `--other-results` or `-o` to show those results.
 
-`$ swift run HighestNumberPairing 8 no`
+`$ swift run HighestNumberPairing --other-results 8`
 
 or
 
-`$ swift run HighestNumberPairing 8 false`
+`$ swift run HighestNumberPairing -o 8`
+
+To get help, use `--help`:
+
+`$ swift run HighestNumberPairing --help`
 
 ## To Test
 
