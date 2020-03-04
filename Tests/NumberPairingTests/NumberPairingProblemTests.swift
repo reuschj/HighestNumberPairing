@@ -24,13 +24,11 @@ class NumberPairingProblemTests: XCTestCase {
 
     func printWithOtherResults(size: Double = 8) -> NumberPairingProblem {
         let testProblem = NumberPairingProblem(addingUpTo: size)
-        testProblem.printAllResults()
         return testProblem
     }
 
     func printWithoutOtherResults(size: Double = 8) -> NumberPairingProblem {
         let testProblem = NumberPairingProblem(addingUpTo: size, withOtherResults: false)
-        testProblem.printAllResults()
         return testProblem
     }
 

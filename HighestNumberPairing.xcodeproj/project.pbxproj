@@ -115,20 +115,12 @@
 		OBJ_10 /* NumberPairing */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_11 /* Defintions */,
+				OBJ_12 /* NumberPairing.swift */,
+				OBJ_13 /* NumberPairingProblem.swift */,
 			);
 			name = NumberPairing;
 			path = Sources/NumberPairing;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_11 /* Defintions */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_12 /* NumberPairing.swift */,
-				OBJ_13 /* NumberPairingProblem.swift */,
-			);
-			path = Defintions;
-			sourceTree = "<group>";
 		};
 		OBJ_17 /* Tests */ = {
 			isa = PBXGroup;

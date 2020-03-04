@@ -47,7 +47,7 @@ public struct NumberPairingProblem {
 
         // This is a NumberPairing instance that will always have a result of 0
         // We will use this as the initial high NumberPairing to beat
-        let initialHighValue = NumberPairing(oneNumber: 0, of: sum)
+        let initialHighValue = NumberPairing(oneNumber: 0, addingUpTo: sum)
 
         // These constants for lower and upper bounds set the boundaries for numbers in the number pairing
         // We will use these to ensure we don't get a NumberPairing with a number outside of these bounds
@@ -88,7 +88,7 @@ public struct NumberPairingProblem {
             for number in searchRange {
 
                 // Create a new NumberPairing to evaluate
-                let thisResult = NumberPairing(oneNumber: number, of: sum)
+                let thisResult = NumberPairing(oneNumber: number, addingUpTo: sum)
                 if thisResult > bestResultFromSequence {
                     // If the new Result is better than any other in the sequence, it's the new max
                     // We'll set it to the best in sequence and move and previous best results to the other results array

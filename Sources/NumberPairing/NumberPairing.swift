@@ -33,7 +33,7 @@ public struct NumberPairing: Equatable, Comparable, Hashable {
 
     // Initializers ---------------------------------------------------------- /
 
-    public init(oneNumber: Double, of sum: Double = NumberPairing.defaultSum) {
+    public init(oneNumber: Double, addingUpTo sum: Double = NumberPairing.defaultSum) {
         self.stored = oneNumber
         self.sum = sum
         self.stored = validateAndCorrect(oneNumber)
