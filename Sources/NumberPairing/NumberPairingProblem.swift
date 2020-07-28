@@ -174,3 +174,46 @@ public struct NumberPairingProblem {
         return (overallBestResult.result, bestResults, othersSorted)
     }
 }
+
+extension NumberPairingProblem: CustomStringConvertible {
+    /// String representation
+    public var description: String {
+        var output = """
+        \(bestResultReport)
+        \(bestNumberPairingReport)
+        """
+        if let other = otherNumberPairingsReport {
+            output += """
+            \n
+            \(other)
+            """
+        }
+        return output
+    }
+    
+    /// Accesses best result and output as a formatted string report
+    public var bestResultReport: String { "\nBest Result: (Solved in \(runsToSolve) run\(runsToSolve == 1 ? "" : "s"))\n\(bestResult)\n" }
+    
+    /// Accesses an array of winning number pairings and outputs as formatted string report
+    public var bestNumberPairingReport: String {
+        var output = "Best Number Combination:"
+        let _ = bestNumberPairings.map {
+            output += "\n\($0)"
+        }
+        return output
+    }
+    
+    /// Accesses an array of other number pairings and outputs as formatted string report
+    public var otherNumberPairingsReport: String? {
+        guard let allOtherResults = otherNumberPairings else { return nil }
+        var output = "Other Top Results:"
+        let maxResults = allOtherResults.count > 10 ? 10 : allOtherResults.count
+        for index in 0 ..< maxResults {
+            output += "\n\(allOtherResults[index])"
+        }
+        if maxResults < allOtherResults.count {
+            output += "\n\u{2026}\n"
+        }
+        return output
+    }
+}
