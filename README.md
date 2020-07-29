@@ -61,4 +61,4 @@ Tests can also be run from within Xcode.
 
 ## To Do
 - More unit testing.
-- Improve number formatting for printout (low priority)
+- Ongoing tweaks
