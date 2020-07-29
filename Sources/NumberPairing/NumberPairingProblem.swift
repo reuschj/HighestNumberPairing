@@ -9,7 +9,7 @@
 import Foundation
 
 /**
-  * A class to define a problem by which takes two numbers that sum to a given amount (default to 8).
+  * A structure to define a problem by which takes two numbers that sum to a given amount (default to 8).
   * The problem must find the largest number combination (determined by multiplying the difference by the product of the two numbers)
   */
 public struct NumberPairingProblem {
