@@ -7,7 +7,7 @@ let package = Package(
     name: "HighestNumberPairing",
     products: [
         .executable(name: "HighestNumberPairing", targets: ["HighestNumberPairing"]),
-        .library(name: "NumberPairing", targets: ["NumberPairing"]),
+        .library(name: "NumberPairing", targets: ["NumberPairing"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,6 +24,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "NumberPairingTests",
-            dependencies: ["NumberPairing"]),
+            dependencies: ["NumberPairing"])
     ]
 )

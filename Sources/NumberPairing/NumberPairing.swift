@@ -13,20 +13,20 @@ import Foundation
  * Finds the product, the difference and the result of multiplying the difference and the product.
  */
 public struct NumberPairing {
-    
+
     private var stored: Double
     public let sum: Double
-    
+
     public var first: Double {
         get { stored }
         set { stored = validateAndCorrect(newValue) }
     }
-    
+
     public var second: Double {
         get { sum - stored }
         set { stored = sum - validateAndCorrect(newValue) }
     }
-    
+
     public var product: Double { stored * second }
     public var difference: Double { abs(stored - second) }
     public var result: Double { product * difference }
@@ -60,7 +60,7 @@ public struct NumberPairing {
 
     /// The default version of this problem is two numbers that add to 8
     public static let defaultSum: Double = 8
-    
+
     /// The minimum level of precision we care about... beyond this point, we'll consider values equal
     static let minimumPrecision = 0.0000000001
 }
@@ -73,7 +73,7 @@ extension NumberPairing: Equatable, Comparable {
         let storedIsEqualToInverse = lhs.stored == rhs.second
         return (sumsAreEqual && storedAreEqual) || (sumsAreEqual && storedIsEqualToInverse)
     }
-    
+
     /// Method for comparison
     public static func < (lhs: NumberPairing, rhs: NumberPairing) -> Bool { lhs.result < rhs.result }
 }
@@ -89,7 +89,7 @@ extension NumberPairing: Hashable {
 extension NumberPairing: CustomStringConvertible {
     /// String representation
     public var description: String { shortReport }
-    
+
     /// Creates a long report with both numbers, the product, difference and the result
     public var longReport: String {
         let precision = 4
@@ -106,7 +106,7 @@ extension NumberPairing: CustomStringConvertible {
         Result: \(resultRounded)\n
         """
     }
-    
+
     /// Creates a short report with both numbers and the result
     public var shortReport: String {
         let precision = 4

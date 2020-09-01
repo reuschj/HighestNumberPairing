@@ -41,8 +41,7 @@ class NumberPairingProblemTests: XCTestCase {
             let difference = abs(bestResult - expectedResult)
             let testAssumption = difference < marginOfError
             XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
-        }
-        
+        } 
     }
 
     func testThatRunCountIsUnderForty() {
@@ -53,47 +52,35 @@ class NumberPairingProblemTests: XCTestCase {
             let testAssumption = runs < maxRunCount
             XCTAssert(testAssumption, "Run count was \(runs), which is not less than the maximum runs allowed.")
         }
-        
     }
 
     func testPerformanceOfStandardProblemWithOtherResults() {
         self.measure {
-            let _ = self.printWithOtherResults()
+            _ = self.printWithOtherResults()
         }
     }
 
     func testPerformanceOfLargeProblemWithOtherResults() {
         self.measure {
-            let _ = self.printWithOtherResults(size: largeProblemSize)
+            _ = self.printWithOtherResults(size: largeProblemSize)
         }
     }
 
     func testPerformanceOfLargeProblemWithoutOtherResults() {
         self.measure {
-            let _ = self.printWithoutOtherResults(size: largeProblemSize)
+            _ = self.printWithoutOtherResults(size: largeProblemSize)
         }
     }
 
     func testPerformanceOfMassiveProblemWithOtherResults() {
         self.measure {
-            let _ = self.printWithOtherResults(size: massiveProblemSize)
+            _ = self.printWithOtherResults(size: massiveProblemSize)
         }
     }
 
     func testPerformanceOfMassiveProblemWithoutOtherResults() {
         self.measure {
-            let _ = self.printWithoutOtherResults(size: massiveProblemSize)
+            _ = self.printWithoutOtherResults(size: massiveProblemSize)
         }
     }
-
-    static var allTests = [
-        ("testResultForEightIsCorrect", testResultForEightIsCorrect),
-        ("testThatRunCountIsUnderForty", testThatRunCountIsUnderForty),
-        ("testPerformanceOfStandardProblemWithOtherResults", testPerformanceOfStandardProblemWithOtherResults),
-        ("testPerformanceOfLargeProblemWithOtherResults", testPerformanceOfLargeProblemWithOtherResults),
-        ("testPerformanceOfLargeProblemWithoutOtherResults", testPerformanceOfLargeProblemWithoutOtherResults),
-        ("testPerformanceOfMassiveProblemWithOtherResults", testPerformanceOfMassiveProblemWithOtherResults),
-        ("testPerformanceOfMassiveProblemWithoutOtherResults", testPerformanceOfMassiveProblemWithoutOtherResults)
-    ]
-
 }

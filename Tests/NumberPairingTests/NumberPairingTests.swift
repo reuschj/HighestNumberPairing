@@ -54,11 +54,4 @@ class NumberPairingUnitTests: XCTestCase {
             XCTAssertEqual(testNumberPairing.sum, 8.0, "Sum should be 8")
         }
     }
-
-    static var allTests = [
-        ("testThatNumberPairingEqualityWorks", testThatNumberPairingEqualityWorks),
-        ("testThatComparisonWorks", testThatComparisonWorks),
-        ("testPerformanceOfCreation", testPerformanceOfCreation)
-    ]
-
 }
