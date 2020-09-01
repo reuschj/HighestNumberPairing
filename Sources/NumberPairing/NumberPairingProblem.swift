@@ -10,16 +10,17 @@ import Foundation
 
 /**
   * A structure to define a problem by which takes two numbers that sum to a given amount (default to 8).
-  * The problem must find the largest number combination (determined by multiplying the difference by the product of the two numbers)
+  * The problem must find the largest number combination
+  * (determined by multiplying the difference by the product of the two numbers)
   */
 public struct NumberPairingProblem {
     let sum: Double
     var runsToSolve: Int
-    
+
     typealias ResultsTuple = (best: Double, bestPairing: Set<NumberPairing>, other: [NumberPairing]?)
     /// Private property to store results
     private var results: ResultsTuple!
-    
+
     /// Accesses best result
     public var bestResult: Double { results.best }
     /// Accesses an array of winning number pairings
@@ -30,7 +31,10 @@ public struct NumberPairingProblem {
 
     // Initializers ---------------------------------------------------------- /
 
-    public init(addingUpTo initialSum: Double = NumberPairing.defaultSum, withOtherResults collectOtherResults: Bool = true) {
+    public init(
+        addingUpTo initialSum: Double = NumberPairing.defaultSum,
+        withOtherResults collectOtherResults: Bool = true
+    ) {
         self.sum = initialSum
         self.runsToSolve = 0
         self.results = self.getResults(withOtherResults: collectOtherResults)
@@ -40,10 +44,13 @@ public struct NumberPairingProblem {
 
     /**
       * This method is called during initialization to get the results of the problem
-      * Returns a tuple with the best result, an array of best result pairings and an array of other top pairings (sorted)
+      * Returns a tuple with the best result, an array of best result pairings and an 
+      * array of other top pairings (sorted)
       * These values will be accessed by public getter properties
       */
-    private mutating func getResults(withOtherResults collectOtherResults: Bool = true) -> (Double, Set<NumberPairing>, [NumberPairing]?) {
+    private mutating func getResults(
+        withOtherResults collectOtherResults: Bool = true
+    ) -> (Double, Set<NumberPairing>, [NumberPairing]?) {
 
         // This is a NumberPairing instance that will always have a result of 0
         // We will use this as the initial high NumberPairing to beat
@@ -54,26 +61,29 @@ public struct NumberPairingProblem {
         let lowerBounds: Double = 0
         let upperBounds: Double = sum / 2
 
-        // These variable will hold the current overall best result that the recursive function will compare to and set as needed
+        // These variable will hold the current overall best result that the recursive 
+        // function will compare to and set as needed
         // At the end, these values will be returned in a tuple
         var overallBestResult: NumberPairing = initialHighValue
         var bestResults = Set<NumberPairing>()
         var otherResults: Set<NumberPairing>? = collectOtherResults ? Set<NumberPairing>() : nil
 
-        // This is a failsafe. Hopefully, we end recursion before we get here, but just in case, it sets a limit on recursion
+        // This is a failsafe. Hopefully, we end recursion before we get here, 
+        // but just in case, it sets a limit on recursion
         var runCount = 0
         var maxRuns = 40
 
         // This is a recursive function that will start with low precision, look for the max value,
         // then continue looking for higher max values (at a higher precision) around that max value.
         // When further recursion no longer finds a better value, recursion ends (as the max value has been found)
-        func getHighestResultOfSequence(from lowValue: Double, to highValue: Double, by precision: Double) -> Void {
+        func getHighestResultOfSequence(from lowValue: Double, to highValue: Double, by precision: Double) {
 
             // If we hit the max run count, we will return and stop recursion
             guard runCount < maxRuns else { return }
             runCount += 1
 
-            // We will set three local variables that will be for each recursive run... these will be compared to the overall variables for the method
+            // We will set three local variables that will be for each recursive run...
+            // these will be compared to the overall variables for the method
             var bestResultFromSequence: NumberPairing = initialHighValue
             var bestResultsFromSequence = Set<NumberPairing>()
             var otherResultsFromSequence: Set<NumberPairing>? = collectOtherResults ? Set<NumberPairing>() : nil
@@ -91,11 +101,12 @@ public struct NumberPairingProblem {
                 let thisResult = NumberPairing(oneNumber: number, addingUpTo: sum)
                 if thisResult > bestResultFromSequence {
                     // If the new Result is better than any other in the sequence, it's the new max
-                    // We'll set it to the best in sequence and move and previous best results to the other results array
+                    // We'll set it to the best in sequence and move and previous best results to
+                    // the other results array
                     // Then add the new result to the best results array
                     bestResultFromSequence = thisResult
                     for result in bestResultsFromSequence {
-                        if (canBeAddedToOther(result)) {
+                        if canBeAddedToOther(result) {
                             otherResultsFromSequence?.insert(result)
                         }
                     }
@@ -103,8 +114,8 @@ public struct NumberPairingProblem {
                     bestResultsFromSequence.insert(thisResult)
 
                 } else if thisResult == bestResultFromSequence {
-
-                    // If we found a NumberPairing that matches, but doesn't exceed, the existing best, we'll add it to the best results array
+                    // If we found a NumberPairing that matches, but doesn't exceed, 
+                    // the existing best, we'll add it to the best results array
                     bestResultsFromSequence.insert(thisResult)
 
                 } else if canBeAddedToOther(thisResult) {
@@ -115,19 +126,23 @@ public struct NumberPairingProblem {
                 }
             }
 
-            // When the best result from the sequence is lower or equal to the overall result (or close enough), we found the max and can stop
-            let conditionToEndRecursion = bestResultFromSequence <= overallBestResult || bestResultFromSequence.isEquivalentTo(overallBestResult)
+            // When the best result from the sequence is lower or equal to the overall result
+            // (or close enough), we found the max and can stop
+            let conditionToEndRecursion = (
+                bestResultFromSequence <= overallBestResult || bestResultFromSequence.isEquivalentTo(overallBestResult)
+            )
             if conditionToEndRecursion {
                 runsToSolve = runCount
                 return
             }
 
-            // In this case, the sequence produced a higher result than the previous, so we'll set it to the new overall best
+            // In this case, the sequence produced a higher result than the previous,
+            // so we'll set it to the new overall best
             // We'll also move the previous best results from the best results array to the other results array
             // and add the new best results to the best results array
             overallBestResult = bestResultFromSequence
             for result in bestResults {
-                if (canBeAddedToOther(result)) {
+                if canBeAddedToOther(result) {
                     otherResults?.insert(result)
                 }
             }
@@ -137,13 +152,15 @@ public struct NumberPairingProblem {
                 otherResults?.formUnion(possibleOtherResultsFromSequence)
             }
 
-            // This finds what the first number was from the best result. This the number we'll target when call the function again
+            // This finds what the first number was from the best result.
+            // This the number we'll target when call the function again
             let bestNumberFromSequence: Double = bestResultFromSequence.first
             // We will run the function again with more precision...
             let newPrecision: Double = precision / Double(runCount * 4)
             // We'll look to half the current precision on either side of the best value
             let marginToSearchAroundBestValue: Double = precision / 2
-            // ... but we'll look in a smaller range. The new result will be the best number from the sequence minus the shrink amount
+            // ... but we'll look in a smaller range. The new result will be the best number
+            // from the sequence minus the shrink amount
             var newLowValue = bestNumberFromSequence - marginToSearchAroundBestValue
             if newLowValue < lowerBounds {
                 // If new start is lower than lower bounds, snap it to lower bounds
@@ -190,19 +207,21 @@ extension NumberPairingProblem: CustomStringConvertible {
         }
         return output
     }
-    
+
     /// Accesses best result and output as a formatted string report
-    public var bestResultReport: String { "\nBest Result: (Solved in \(runsToSolve) run\(runsToSolve == 1 ? "" : "s"))\n\(bestResult)\n" }
-    
+    public var bestResultReport: String {
+        "\nBest Result: (Solved in \(runsToSolve) run\(runsToSolve == 1 ? "" : "s"))\n\(bestResult)\n"
+    }
+
     /// Accesses an array of winning number pairings and outputs as formatted string report
     public var bestNumberPairingReport: String {
         var output = "Best Number Combination:"
-        let _ = bestNumberPairings.map {
+        _ = bestNumberPairings.map {
             output += "\n\($0)"
         }
         return output
     }
-    
+
     /// Accesses an array of other number pairings and outputs as formatted string report
     public var otherNumberPairingsReport: String? {
         guard let allOtherResults = otherNumberPairings else { return nil }
