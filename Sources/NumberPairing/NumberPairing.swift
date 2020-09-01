@@ -3,7 +3,7 @@
 //  HighestNumberPairing
 //
 //  Created by Justin Reusch on 1/9/19.
-//  Copyright © 2019 Justin Reusch. All rightsNumberPairingTests reserved.
+//  Copyright © 2019 Justin Reusch. All rights reserved.
 //
 
 import Foundation
