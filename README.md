@@ -47,6 +47,9 @@ From the command line, enter to run all unit tests:
 
 Tests can also be run from within Xcode.
 
+On Linux, as of Swift 5.1, tests are auto-discoverable, but you will have enable the option for now.
+
+`$ swift test --enable-test-discovery`
 
 ## New
 - Adds the new Swift [ArgumentParser](https://github.com/apple/swift-argument-parser) package.
@@ -60,5 +63,4 @@ Tests can also be run from within Xcode.
 
 
 ## To Do
-- More unit testing.
 - Ongoing tweaks

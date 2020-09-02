@@ -9,8 +9,8 @@ import Foundation
 import NumberPairing
 
 // Lines of various length
-fileprivate let lineChar = "-"
-fileprivate let lineBaseLength = 9
+private let lineChar = "-"
+private let lineBaseLength = 9
 let lineShort = String(repeating: lineChar, count: lineBaseLength * 1)
 let lineMedium = String(repeating: lineChar, count: lineBaseLength * 2)
 let lineLong = String(repeating: lineChar, count: lineBaseLength * 3)

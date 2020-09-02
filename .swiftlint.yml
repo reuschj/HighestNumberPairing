@@ -1,0 +1,3 @@
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  - large_tuple
+  - function_body_length

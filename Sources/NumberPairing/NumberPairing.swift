@@ -116,6 +116,7 @@ extension NumberPairing: CustomStringConvertible {
         let productRounded = formatFloat(product, to: precision)
         let differenceRounded = formatFloat(difference, to: precision)
         let resultRounded = formatFloat(result, to: precision)
+        // swiftlint:disable:next line_length
         return "\(firstRounded) and \(secondRounded) -> \(sumRounded) (Difference: \(differenceRounded), Product: \(productRounded) -> Result: \(resultRounded))"
     }
 }
