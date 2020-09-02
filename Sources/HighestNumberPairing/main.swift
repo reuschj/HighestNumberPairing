@@ -24,15 +24,22 @@ struct HighestNumberPairing: ParsableCommand {
     var otherResults: Bool
 
     @Argument(
-        // swiftlint:disable:next line_length
-        help: "Any positive number (Default: \(NumberPairing.defaultSum)). This program will find two numbers that add up to that number, such that the product multiplied by the difference produces the largest possible value."
+        help: """
+        Any positive number (Default: \(NumberPairing.defaultSum)). \
+        This program will find two numbers that add up to that number, \
+        such that the product multiplied by the difference produces the \
+        largest possible value.
+        """
     )
     var numberSum: Double?
 
     var sum: Double {  numberSum ?? NumberPairing.defaultSum }
     private var introString: String {
-        // swiftlint:disable:next line_length
-        "Problem:\nFind two numbers that add up to \(formatFloat(sum)), such that the product multiplied by the difference produces the largest possible value."
+        """
+        Problem:\nFind two numbers that add up to \(formatFloat(sum)), \
+        such that the product multiplied by the difference produces the \
+        largest possible value.
+        """
     }
 
     func run() {
