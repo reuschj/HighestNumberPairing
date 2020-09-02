@@ -31,7 +31,6 @@ class NumberPairingUnitTests: XCTestCase {
             XCTAssert(threeAddsUpToEight != sixAddsUpToEight)
             XCTAssert(threeAddsUpToEight != threeAddsUpToTen)
         }
-        
     }
 
     func testThatComparisonWorks() {
@@ -39,9 +38,18 @@ class NumberPairingUnitTests: XCTestCase {
             let twoAddsUpToEight = NumberPairing(oneNumber: 2, addingUpTo: 8)
             let sixAddsUpToEight = NumberPairing(oneNumber: 6, addingUpTo: 8)
             let threeAddsUpToEight = NumberPairing(oneNumber: 3, addingUpTo: 8)
-            XCTAssert(twoAddsUpToEight >= sixAddsUpToEight, "twoAddsUpToEight should be greater than or equal to (it's equal) sixAddsUpToEight")
-            XCTAssert(threeAddsUpToEight < sixAddsUpToEight, "threeAddsUpToEight should be less than sixAddsUpToEight")
-            XCTAssert(sixAddsUpToEight > threeAddsUpToEight, "sixAddsUpToEight should be greater than threeAddsUpToEight")
+            XCTAssert(
+                twoAddsUpToEight >= sixAddsUpToEight,
+                "twoAddsUpToEight should be greater than or equal to (it's equal) sixAddsUpToEight"
+            )
+            XCTAssert(
+                threeAddsUpToEight < sixAddsUpToEight,
+                "threeAddsUpToEight should be less than sixAddsUpToEight"
+            )
+            XCTAssert(
+                sixAddsUpToEight > threeAddsUpToEight,
+                "sixAddsUpToEight should be greater than threeAddsUpToEight"
+            )
         }
     }
 

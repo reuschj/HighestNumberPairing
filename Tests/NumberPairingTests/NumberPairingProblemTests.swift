@@ -40,8 +40,11 @@ class NumberPairingProblemTests: XCTestCase {
             let marginOfError = 0.00000001
             let difference = abs(bestResult - expectedResult)
             let testAssumption = difference < marginOfError
-            XCTAssert(testAssumption, "Test failed because difference was expected to be below \(marginOfError) and was \(difference)")
-        } 
+            XCTAssert(
+                testAssumption,
+                "Test failed because difference was expected to be below \(marginOfError) and was \(difference)"
+            )
+        }
     }
 
     func testThatRunCountIsUnderForty() {

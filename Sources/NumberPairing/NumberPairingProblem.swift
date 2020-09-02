@@ -8,6 +8,8 @@
 
 import Foundation
 
+// swiftlint:disable large_tuple function_body_length
+
 /**
   * A structure to define a problem by which takes two numbers that sum to a given amount (default to 8).
   * The problem must find the largest number combination
@@ -27,7 +29,6 @@ public struct NumberPairingProblem {
     public var bestNumberPairings: Set<NumberPairing> { results.bestPairing }
     /// Accesses an array of other number pairings
     public var otherNumberPairings: [NumberPairing]? { results.other }
-
 
     // Initializers ---------------------------------------------------------- /
 
@@ -71,11 +72,12 @@ public struct NumberPairingProblem {
         // This is a failsafe. Hopefully, we end recursion before we get here, 
         // but just in case, it sets a limit on recursion
         var runCount = 0
-        var maxRuns = 40
+        let maxRuns = 40
 
         // This is a recursive function that will start with low precision, look for the max value,
         // then continue looking for higher max values (at a higher precision) around that max value.
         // When further recursion no longer finds a better value, recursion ends (as the max value has been found)
+        // swiftlint:disable cyclomatic_complexity
         func getHighestResultOfSequence(from lowValue: Double, to highValue: Double, by precision: Double) {
 
             // If we hit the max run count, we will return and stop recursion

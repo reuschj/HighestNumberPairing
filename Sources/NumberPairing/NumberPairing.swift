@@ -116,6 +116,10 @@ extension NumberPairing: CustomStringConvertible {
         let productRounded = formatFloat(product, to: precision)
         let differenceRounded = formatFloat(difference, to: precision)
         let resultRounded = formatFloat(result, to: precision)
-        return "\(firstRounded) and \(secondRounded) -> \(sumRounded) (Difference: \(differenceRounded), Product: \(productRounded) -> Result: \(resultRounded))"
+        return """
+        \(firstRounded) and \(secondRounded) -> \(sumRounded) \
+        (Difference: \(differenceRounded), \
+        Product: \(productRounded) -> Result: \(resultRounded))
+        """
     }
 }
