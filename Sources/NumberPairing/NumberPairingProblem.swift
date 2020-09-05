@@ -184,7 +184,7 @@ public struct NumberPairingProblem {
         getHighestResultOfSequence(from: lowerBounds, to: upperBounds, by: sum / 4)
 
         // Sort the other results
-        var othersSorted: [NumberPairing]? = nil
+        var othersSorted: [NumberPairing]?
         if let possibleOtherResults = otherResults {
             othersSorted = Array(possibleOtherResults).sorted {$0.result > $1.result}
         }
